@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Recetas de Cocina{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Bienvenido a Nuestro Sitio de Recetas</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'insertar_datos' %}">Agregar Receta</a></li>
+                <li><a href="{% url 'buscar' %}">Buscar Receta</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        {% block page_content %}
+        {% endblock %}
+    </div>
+{% endblock %}

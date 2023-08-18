@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Recetas{% endblock %}
+
+{% block content %}
+    <div class="recetas-list">
+        <h2>Listado de Recetas</h2>
+        <ul>
+            {% for receta in recetas %}
+                <li><a href="{% url 'detalles_receta' receta.id %}">{{ receta.nombre }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recetas de Cocina</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Recetas de Cocina</h1>
+        <ul class="nav">
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'insertar_datos' %}">Agregar Receta</a></li>
+            <li><a href="{% url 'buscar' %}">Buscar Receta</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

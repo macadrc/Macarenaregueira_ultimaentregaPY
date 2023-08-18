@@ -1,0 +1,17 @@
+<h1>Agregar Nueva Receta</h1>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label for="{{ receta_form.nombre.id_for_label }}">Nombre de la Receta:</label>
+        {{ receta_form.nombre }}
+    </div>
+    <div>
+        <label for="{{ receta_form.precio.id_for_label }}">Precio:</label>
+        {{ receta_form.precio }}
+    </div>
+    <div>
+        <label for="{{ receta_form.categoria.id_for_label }}">Categoría:</label>
+        {{ receta_form.categoria }}
+    </div>
+    <button type="submit">Guardar Receta</button>
+</form>
